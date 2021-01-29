@@ -1,0 +1,29 @@
+{
+  "name": "youtube-clone",
+  "version": "1.0.0",
+  "description": "YouTube Clone using VanillaJS and NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syhua4/YouTube-Clone.git"
+  },
+  "keywords": [
+    "YouTube",
+    "Clone",
+    "VanillaJS",
+    "NodeJS",
+    "Express"
+  ],
+  "author": "Shirley Huang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/syhua4/YouTube-Clone/issues"
+  },
+  "homepage": "https://github.com/syhua4/YouTube-Clone#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
