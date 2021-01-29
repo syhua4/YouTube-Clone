@@ -1,0 +1,14 @@
+{
+  "name": "youtube-clone",
+  "version": "1.0.0",
+  "description": "Create a youtube clone using VanillaJS and NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shirley Huang",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
