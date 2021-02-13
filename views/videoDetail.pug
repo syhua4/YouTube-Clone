@@ -1,0 +1,43 @@
+extends layouts/main.pug
+
+block content
+  .video-container
+    .video__player
+      video(id="jsVideo", src=`/${video.fileUrl}`, controls)
+    .video__info
+      .video__info__wrapper
+        .video__info__left
+          h5.video__title=video.title
+          if video.views <= 1
+            span.video__views #{video.views} view
+          else
+            span.video__views #{video.views} views
+          span.video__date=date
+        if video.creator.id === user.id
+          .video__info__right
+            a.edit-btn(href=routes.editVideo(video.id)) Edit Video
+      .video__creator
+        a.creator__link(href=routes.userDetail(video.creator.id))
+          if video.creator.avatarUrl
+            img.creator__avatar(src=`/${video.creator.avatarUrl}`)
+          else
+            img.creator__avatar(src='/static/images/default_avatar.png')
+          p.creator=video.creator.name
+      p.video__description=video.description
+      
+      .video__comments
+        span.video__comment #{video.comments.length ? video.comments.length : 0} Comments
+        form.comment__form
+          .video__creator
+            if video.creator.avatarUrl
+              img.creator__avatar(src=`/${video.creator.avatarUrl}`)
+            else
+              img.creator__avatar(src='/static/images/default_avatar.png')
+          input(type="text", placeholder="Add a comment...", name="comment", class="comment_input", id="comment_text")
+          input(type="submit", value="comment", class="comment_btn")
+        ul.comment__list
+          each comment in video.comments.reverse()
+            li=comment.text
+              if comment.creator == user.id
+                span.delete__comment
+                  i(class="fas fa-trash-alt" , id=comment.id)

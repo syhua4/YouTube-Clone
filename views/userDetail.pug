@@ -1,0 +1,31 @@
+extends layouts/main.pug
+include mixins/videoBlock
+
+block content
+  .user-wrapper
+    .user-container
+      if !profile.avatarUrl
+        img.avatar(src='/static/images/default_avatar.png')
+      else
+        img.avatar(src=`/${profile.avatarUrl}`)
+      .user-info
+        h3.name #{profile.name}
+        p.email #{profile.email}
+      if profile.id === user.id
+        .option-btn
+          a.edit-btn(href=`/users${routes.editProfile}`) Edit Profile
+          a.edit-btn(href=`/users${routes.changePassword}`) Change Password
+  .video-wrapper
+      h4 Uploads
+      if profile.videos.length
+        .user__videos
+          each video in profile.videos
+            +videoBlock({
+              id: video.id,
+              title: video.title,
+              views:video.views,
+              videoFile:video.fileUrl
+            })
+      else
+        p.no-video Start uploading your video from today!
+

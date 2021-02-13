@@ -1,0 +1,70 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  form,
+  .social-login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    margin-bottom: 30px;
+    input,
+    button,
+    textarea {
+      background-color: #fff;
+      border: transparent;
+      border-radius: 3px;
+      padding-left: 12px;
+      height: 32px;
+      line-height: 32px;
+      display: block;
+      width: 100%;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+        0 3px 6px rgba(0, 0, 0, 0.1);
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+      &[type="submit"] {
+        background-color: $red;
+        cursor: pointer;
+        color: #fff;
+        font-weight: 700;
+      }
+    }
+  }
+  .social-login button {
+    cursor: pointer;
+    font-weight: 600;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    a {
+      color: #fff;
+    }
+    i {
+      margin-right: 10px;
+    }
+    &.social-login--github {
+      background-color: #333;
+    }
+    &.social-login--facebook {
+      background-color: #4e68a5;
+    }
+  }
+  .form-container__deleteVideo {
+    background-color: $red;
+    border: transparent;
+    border-radius: 3px;
+    height: 32px;
+    line-height: 32px;
+    display: block;
+    text-align: center;
+    width: 320px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-weight: 700;
+  }
+}

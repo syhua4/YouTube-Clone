@@ -1,0 +1,47 @@
+.header {
+  height: 56px;
+  background-color: #fff;
+  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+  .header__wrapper {
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      height: 24px;
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+
+      i {
+        font-size: 24px;
+        color: $red;
+        margin-right: 5px;
+      }
+    }
+    .header__column:nth-child(2) {
+      width: 728px;
+      flex: 0 1 728px;
+      min-width: 0px;
+      form input {
+        height: 32px;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 16px;
+        line-height: 24px;
+        padding-left: 12px;
+      }
+    }
+    .header__column:nth-child(3) {
+      ul {
+        display: flex;
+        li {
+          margin: 0 8px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

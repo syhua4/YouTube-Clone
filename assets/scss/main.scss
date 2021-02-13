@@ -1,0 +1,13 @@
+body {
+  background-color: $bg_color;
+  color: $font_color;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;
+}
+
+main {
+  width: 100%;
+  // max-width: 1400px;
+  margin: 0 auto;
+  min-height: 85vh;
+}

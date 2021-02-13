@@ -1,0 +1,18 @@
+extends layouts/main.pug
+include mixins/videoBlock
+
+
+block content
+  .search__header
+    h3 Searching for: #{searchingTerm}
+  .search__videos
+    if videos.length !== 0
+      each video in videos
+        +videoBlock({
+            id: video.id,
+          title: video.title,
+          views:video.views,
+          videoFile:video.fileUrl
+        })
+    else
+      h5 No Videos Found
